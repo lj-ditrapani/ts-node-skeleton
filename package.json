@@ -16,9 +16,9 @@
     "all": "npm run lint && tsc && npm test"
   },
   "keywords": [
-      "typescript",
-      "node",
-      "ts-node"
+    "typescript",
+    "node",
+    "ts-node"
   ],
   "author": "<author>",
   "repository": "https://github.com/lj-ditrapani/ts-node-skeleton",

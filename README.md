@@ -13,6 +13,11 @@ Developing
     npm install
 
 
+### Run it ###
+
+    npm start
+
+
 ### Format, lint, build, test ###
 
     npm run all
@@ -21,6 +26,7 @@ Developing
 ### Generate documentation ###
 
     npm run doc
+    firefox docs/index.html &
 
 
 ### Update dependencies ###
