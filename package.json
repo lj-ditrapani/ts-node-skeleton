@@ -1,0 +1,45 @@
+{
+  "name": "ts-node-skeleton",
+  "version": "0.0.1",
+  "description": "ts-node-skeleton",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "ts-node-esm src/index.ts",
+    "test": "jest --coverage",
+    "fmt": "prettier --write '*.yaml' '*.json'",
+    "eslint": "eslint --fix *.ts 'src/**/*.ts' 'test/**/*.ts'",
+    "lint": "npm run fmt && npm run eslint",
+    "ncu": "ncu -u && rm -fr node_modules package-lock.json && npm install",
+    "tsc": "tsc",
+    "doc": "typedoc --out doc/ src",
+    "all": "npm run lint && tsc && npm test"
+  },
+  "keywords": [
+      "typescript",
+      "node",
+      "ts-node"
+  ],
+  "author": "<author>",
+  "repository": "https://github.com/lj-ditrapani/ts-node-skeleton",
+  "dependencies": {
+    "@types/node": "^18.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@tsconfig/node16-strictest-esm": "^1.0.3",
+    "@types/jest": "^28.1.6",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^28.1.3",
+    "npm-check-updates": "^15.3.3",
+    "prettier": "^2.7.1",
+    "source-map-support": "^0.5.21",
+    "ts-jest": "^28.0.6",
+    "typedoc": "^0.23.7"
+  }
+}
