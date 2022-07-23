@@ -7,6 +7,8 @@ TypeScript node.js project skeleton
 Developing
 ----------
 
+Install node 16.  You can use nvm to manage node versions.
+
 
 ### First time install ###
 
@@ -21,6 +23,15 @@ Developing
 ### Format, lint, build, test ###
 
     npm run all
+
+
+### Test coverage ###
+
+    # Run the tests with `npm run all` or
+    npm test
+    # This will generate the test coverage report
+    # Then open the test coverage report
+    firefox coverage/lcov-report/index.html
 
 
 ### Generate documentation ###
