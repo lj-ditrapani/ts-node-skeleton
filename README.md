@@ -26,7 +26,7 @@ Install npm packages.
     npm install
 
 
-### Run it ###
+### Run ###
 
     npm start
 
