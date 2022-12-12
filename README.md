@@ -1,7 +1,14 @@
 TypeScript Node Skeleton
 ========================
 
-TypeScript node.js project skeleton
+TypeScript node.js project skeleton.  Clone this and modify.
+
+
+Docker
+------
+
+    sh docker-build.sh
+    sh docker-run.sh
 
 
 Developing
@@ -22,6 +29,13 @@ Install npm packages.
 ### Run it ###
 
     npm start
+
+
+### Run during dev ###
+
+While developing, you can skip building by using tsnode.
+
+    npm run start-dev
 
 
 ### Format, lint, build, test ###

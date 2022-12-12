@@ -5,14 +5,19 @@
   "main": "src/index.ts",
   "type": "module",
   "scripts": {
-    "start": "ts-node-esm src/index.ts",
+    "start": "node dist/index.js",
+    "start-dev": "ts-node-esm src/index.ts",
     "test": "jest --coverage",
     "fmt": "prettier --write '*.yaml' '*.json'",
+    "fmtcheck": "prettier --check '*.yaml' '*.json'",
     "eslint": "eslint --fix *.ts 'src/**/*.ts' 'test/**/*.ts'",
+    "eslintcheck": "eslint *.ts 'src/**/*.ts' 'test/**/*.ts'",
+    "check": "npm run fmtcheck && npm run eslintcheck",
     "lint": "npm run fmt && npm run eslint",
     "ncu": "ncu -u && rm -fr node_modules package-lock.json && npm install",
     "tsc": "tsc",
     "doc": "typedoc --out doc/ src",
+    "ci": "npm run check && tsc && npm test",
     "all": "npm run lint && tsc && npm test"
   },
   "keywords": [
@@ -20,16 +25,12 @@
     "node",
     "ts-node"
   ],
-  "author": "<author>",
+  "author": "Lyall Jonathan Di Trapani",
   "repository": "https://github.com/lj-ditrapani/ts-node-skeleton",
-  "dependencies": {
-    "@types/node": "^18.11.13",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.9.4"
-  },
   "devDependencies": {
     "@tsconfig/node18-strictest-esm": "^1.0.1",
     "@types/jest": "^29.2.4",
+    "@types/node": "^18.11.13",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
     "eslint": "^8.29.0",
@@ -40,6 +41,8 @@
     "prettier": "^2.8.1",
     "source-map-support": "^0.5.21",
     "ts-jest": "^29.0.3",
-    "typedoc": "^0.23.22"
+    "ts-node": "^10.9.1",
+    "typedoc": "^0.23.22",
+    "typescript": "^4.9.4"
   }
 }
